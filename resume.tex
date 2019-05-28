@@ -1,0 +1,130 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\pagestyle{empty}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{.8ex plus .2ex minus .2ex}
+
+\usepackage[margin=.45in]{geometry}
+
+\usepackage{multicol}
+\setlength{\columnsep}{.275in}
+
+% compile with xelatex / lualatex
+\usepackage{fontspec}
+\setmainfont[
+  UprightFont=* Light,
+  BoldFont=* Medium,
+  ItalicFont=* Light Italic,
+  SmallCapsFont={* Semi Bold},
+  ]{Lato}
+\newfontfamily{\raleway}{Raleway}
+%\usepackage[pro]{fontawesome5}
+
+\usepackage{color}
+\color[RGB]{32,33,36}
+
+\definecolor{urlcolor}{RGB}{16,86,105}
+\usepackage[
+  unicode,
+  pdftitle={Jonah E. Bernhard resume},
+  pdfauthor={Jonah E. Bernhard},
+  bookmarks=false,
+  colorlinks=true,
+  urlcolor=urlcolor
+]{hyperref}
+
+\usepackage[explicit]{titlesec}
+% \titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+\titleformat{\section}{\Large\raleway}{}{0ex}{%
+  #1\color[RGB]{121,170,182}\hspace{.75ex}\leavevmode\leaders\hrule height .65ex depth \dimexpr.4pt-.65ex\hfill\kern0pt%
+}
+\titleformat{\subsection}{\bf}{}{0ex}{#1}
+% \titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
+\titlespacing{\section}{0ex}{3ex plus 2ex minus 2ex}{.4ex}
+\titlespacing{\subsection}{0ex}{.6ex plus .3ex minus .3ex}{0ex minus .8ex}
+
+\usepackage{lipsum}
+
+\begin{document}
+
+%\newcommand{\link}[3]{{\color[gray]{.6}\faIcon[solid]{#1}\enspace\href{#2}{#3}}}
+\newcommand{\link}[3]{{\color[gray]{.6}{#1}\enspace\href{#2}{#3}}}
+\newcommand{\sep}{{\enspace\textperiodcentered\enspace}}
+
+\begin{center}
+  \huge\raleway J.\ Scott Moreland
+\end{center}
+
+\smallskip
+
+\newcommand{\subheading}[3]{{\small #1 \hfill #2--#3}}
+
+% First column
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+
+
+\section{Education}
+
+\subsection{Duke University \hfill Ph.D.\ Physics}
+\subheading{Durham, North Carolina}{2012}{2019}
+
+Specialization: computational nuclear theory
+
+\smallskip
+
+Dissertation: Initial conditions of bulk matter in ultrarelativistic nuclear collisions,
+\href{https://arxiv.org/abs/1904.08290}{arXiv:1904.08290 [nucl-th]}.
+
+\subsection{Ohio State University \hfill B.S.\ Physics \& Mathematics}
+\subheading{Columbus, Ohio}{2006}{2011}
+
+Graduated with Honors
+
+\section{Honors and Awards}
+
+\subsection{Stewardship Science Graduate Fellow}
+
+\subsection{James B.\ Duke Fellow}
+
+\subsection{National Science Foundation Fellowship Awardee}
+
+\section{Links}
+
+LinkedIn:// \href{https://www.linkedin.com/in/jscottmoreland/}{jscottmoreland}\\[1ex]
+Github:// \href{https://github.com/morelandjs}{morelandjs}\\[1ex]
+Personal:// \href{https://moreland.dev}{moreland.dev}\\
+
+\section{Skills}
+
+\subsection{Programming languages}
+
+Python \textbullet\ C++ \textbullet\ Bash \textbullet\ Mathematica \hfill \\
+Matlab \textbullet\ Fortran \hfill\\
+
+\columnbreak
+
+\section{Experience}
+
+\subsection{Automated Insights \textbar\ Data Science Intern}
+\subheading{Durham, North Carolina}{May 2017}{August 2017}
+
+Automated Insights (AI) is making the world's data understandable through natural language generation. Worked with the AI Labs R\&D division to develop an intelligent and contextually-aware synonym suggester Python package for their flagship product Wordsmith. This software was integrated into Wordsmith and deployed at scale.
+
+\subsection{Lawrence Livermore National Lab \textbar\ Research Practicum}
+\subheading{Livermore, California}{June 2014}{August 2014}
+
+Lawrence Livermore National Laboratory leads the nation in stockpile science and delivers solutions for the nation's most challenging security problems. Conducted research in the Life Sciences division and performed massively parallel computer simulations to study the properties of high-temperature nuclear matter.
+
+\section{Selected Publications}
+
+J.\ S.\ Moreland, J.\ E.\ Bernhard, and S.\ A.\ Bass. Alternative ansatz to wounded nucleon and binary collision scaling in high-energy nuclear collisions.
+\textbf{Physical Review C92}, 2015.
+
+\vfill
+
+\end{multicols}
+
+\end{document}
