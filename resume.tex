@@ -1,3 +1,5 @@
+%! TeX program = lualatex
+
 \documentclass[letterpaper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -11,37 +13,34 @@
 \usepackage{multicol}
 \setlength{\columnsep}{.275in}
 
-% compile with xelatex / lualatex
 \usepackage{fontspec}
 \setmainfont[
   UprightFont=* Light,
   BoldFont=* Medium,
   ItalicFont=* Light Italic,
-  SmallCapsFont={* Semi Bold},
   ]{Lato}
 \newfontfamily{\raleway}{Raleway}
-%\usepackage[pro]{fontawesome5}
+\usepackage[pro]{fontawesome5}
 
 \usepackage{color}
-\color[RGB]{32,33,36}
+\definecolor{deepred}{RGB}{146,11,36}
+\definecolor{eggshell}{RGB}{251,249,243}
+\pagecolor{eggshell}
 
-\definecolor{urlcolor}{RGB}{16,86,105}
 \usepackage[
   unicode,
-  pdftitle={Jonah E. Bernhard resume},
-  pdfauthor={Jonah E. Bernhard},
+  pdftitle={J. Scott Moreland resume},
+  pdfauthor={J. Scott Moreland},
   bookmarks=false,
   colorlinks=true,
-  urlcolor=urlcolor
+  urlcolor=deepred
 ]{hyperref}
 
 \usepackage[explicit]{titlesec}
-% \titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
 \titleformat{\section}{\Large\raleway}{}{0ex}{%
-  #1\color[RGB]{121,170,182}\hspace{.75ex}\leavevmode\leaders\hrule height .65ex depth \dimexpr.4pt-.65ex\hfill\kern0pt%
+  #1\color{deepred}\hspace{.75ex}\leavevmode\leaders\hrule height .65ex depth \dimexpr.4pt-.65ex\hfill\kern0pt%
 }
 \titleformat{\subsection}{\bf}{}{0ex}{#1}
-% \titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
 \titlespacing{\section}{0ex}{3ex plus 2ex minus 2ex}{.4ex}
 \titlespacing{\subsection}{0ex}{.6ex plus .3ex minus .3ex}{0ex minus .8ex}
 
@@ -49,22 +48,23 @@
 
 \begin{document}
 
-%\newcommand{\link}[3]{{\color[gray]{.6}\faIcon[solid]{#1}\enspace\href{#2}{#3}}}
-\newcommand{\link}[3]{{\color[gray]{.6}{#1}\enspace\href{#2}{#3}}}
-\newcommand{\sep}{{\enspace\textperiodcentered\enspace}}
+\newcommand{\sep}{{\quad\textbar\quad}}
 
 \begin{center}
-  \huge\raleway J.\ Scott Moreland
+  {\huge\raleway J.\ Scott Moreland}
+\end{center}
+
+\begin{center}
+  \small 313 Arch Street, Philadelphia, PA 19106 \sep
+  morelandjs@gmail.com \sep
+  330-671-1243
 \end{center}
 
 \smallskip
 
 \newcommand{\subheading}[3]{{\small #1 \hfill #2--#3}}
 
-% First column
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{multicols}{2}
-
 
 \section{Education}
 
@@ -76,33 +76,56 @@ Specialization: computational nuclear theory
 \smallskip
 
 Dissertation: Initial conditions of bulk matter in ultrarelativistic nuclear collisions,
-\href{https://arxiv.org/abs/1904.08290}{arXiv:1904.08290 [nucl-th]}.
+\href{https://arxiv.org/abs/1904.08290}{\small arXiv:1904.08290 [nucl-th]}.
 
 \subsection{Ohio State University \hfill B.S.\ Physics \& Mathematics}
 \subheading{Columbus, Ohio}{2006}{2011}
 
-Graduated with Honors
+Graduated with Honors\\
+Deutscher Akademischer Austausch Dienst Study and Internship Program (Munich 7 months, Frankfurt 5 months)
 
 \section{Honors and Awards}
 
 \subsection{Stewardship Science Graduate Fellow}
+\subheading{Krell, Institute}{2012}{2016}
+
+Department of Energy National Nuclear Security Administration Stewardship Science Graduate Fellowship provides financial support for Ph.D.\ students in fields of interest relevant to nuclear security and stockpile stewardship.
+One of five selected nationally.
 
 \subsection{James B.\ Duke Fellow}
+\subheading{Duke University}{2012}{2016}
 
-\subsection{National Science Foundation Fellowship Awardee}
+Duke University four year doctoral fellowship. Recipients are nominated by the department.
 
-\section{Links}
+\subsection{National Science Foundation Fellowship Recipient}
+{\small National Science Foundation \hfill 2012}
 
-LinkedIn:// \href{https://www.linkedin.com/in/jscottmoreland/}{jscottmoreland}\\[1ex]
-Github:// \href{https://github.com/morelandjs}{morelandjs}\\[1ex]
-Personal:// \href{https://moreland.dev}{moreland.dev}\\
+The NSF Graduate Research Fellowship Program recognizes and supports outstanding graduate students in NSF supported science, technology, engineering, and mathematics disciplines.
 
-\section{Skills}
+\section{Articles and Presentations}
 
-\subsection{Programming languages}
+\subsection{Selected Publications}
+\smallskip
 
-Python \textbullet\ C++ \textbullet\ Bash \textbullet\ Mathematica \hfill \\
-Matlab \textbullet\ Fortran \hfill\\
+J.\ S.\ Moreland, J.\ E.\ Bernhard, and S.\ A.\ Bass,
+\href{https://arxiv.org/abs/1412.4708}{Phys.\ Rev.\ C 92, no. 1, 011901 (2015)}
+
+J.\ S.\ Moreland and R.\ A.\ Soltz,
+\href{https://arxiv.org/abs/1512.02189}{Phys.\ Rev.\ C 93, 044913 (2016)}
+
+J.\ E.\ Bernhard, J.\ S.\ Moreland, and S.\ A.\ Bass.
+\href{https://arxiv.org/abs/1605.03954}{Phys.\ Rev.\ C 94, 024907 (2016)}
+
+\subsection{Selected Talks}
+\smallskip
+
+Quark Matter International Conference on Ultra-relativistic Nucleus-Nucleus Collisions, Lido di Venezia, Italy (2018); Chicago, IL (2017); Washington, DC (2012)
+
+Stewardship Science Graduate Fellowship Program Review, Las Vegas, NV (2016)
+
+Initial Stages International Conference on High Energy Nuclear Collisions, Lisbon, Portugal (2016)
+
+International Symposium on Multiparticle Dynamics, Tlaxcala City, Mexico (2017)
 
 \columnbreak
 
@@ -111,19 +134,56 @@ Matlab \textbullet\ Fortran \hfill\\
 \subsection{Automated Insights \textbar\ Data Science Intern}
 \subheading{Durham, North Carolina}{May 2017}{August 2017}
 
-Automated Insights (AI) is making the world's data understandable through natural language generation. Worked with the AI Labs R\&D division to develop an intelligent and contextually-aware synonym suggester Python package for their flagship product Wordsmith. This software was integrated into Wordsmith and deployed at scale.
+Automated Insights (AI) is making the world's data understandable through natural language generation.
+I worked with the AI Labs R\&D division to develop an intelligent and contextually-aware synonym suggester Python package for their flagship product Wordsmith.
+This software was integrated into Wordsmith and deployed at scale.
 
 \subsection{Lawrence Livermore National Lab \textbar\ Research Practicum}
 \subheading{Livermore, California}{June 2014}{August 2014}
 
-Lawrence Livermore National Laboratory leads the nation in stockpile science and delivers solutions for the nation's most challenging security problems. Conducted research in the Life Sciences division and performed massively parallel computer simulations to study the properties of high-temperature nuclear matter.
+Lawrence Livermore National Laboratory leads the nation in stockpile science and delivers solutions for the nation's most challenging security problems.
+I conducted research in the Life Sciences division and performed massively parallel computer simulations to study the properties of high-temperature nuclear matter.
 
-\section{Selected Publications}
+\section{Technical Skills}
 
-J.\ S.\ Moreland, J.\ E.\ Bernhard, and S.\ A.\ Bass. Alternative ansatz to wounded nucleon and binary collision scaling in high-energy nuclear collisions.
-\textbf{Physical Review C92}, 2015.
+\subsection{Programming languages}
+\smallskip
 
-\vfill
+Python, C++, Fortran, Bash, Mathematica, Matlab
+
+\subsection{Data analysis and visualization}
+\smallskip
+
+NumPy, SciPy, scikit-learn, pandas, spaCy, matplotlib, LaTeX, Inkscape, and Gimp
+
+\subsection{Software development and production}
+\smallskip
+
+Git version control, Pytest \& Nose unit test frameworks, Sphinx documentation
+
+\subsection{Machine learning}
+\smallskip
+
+Gaussian process emulators, PCA, Markov chain Monte Carlo, word vectors, paired comparison models: Bradley-Terry (Elo), model parameter estimation and validation
+
+\subsection{Big data}
+\smallskip
+
+High-performance computing, Amazon S3 and I3, Slurm, Condor, HDF5, SQL
+
+\section{Interests}
+
+\subsection{Sports Analytics}
+\smallskip
+
+I developed a computer model to predict the probability distribution of paired comparison outcomes, e.g.\ point totals and spreads: \href{https://moreland.dev/projects/melo}{https://moreland.dev/projects/melo}.
+
+\section{Links}
+
+\faicon{linkedin} \textbar\ \href{https://www.linkedin.com/in/jscottmoreland}{linkedin.com/in/jscottmoreland}\\[1ex]
+\faicon{github} \textbar\ \href{https://github.com/morelandjs}{github.com/morelandjs}\\[1ex]
+\faicon{keynote} \textbar\ \href{https://www.linkedin.com/in/jscottmoreland/}{speakerdeck.com/morelandjs}\\[1ex]
+\faicon{user} \textbar\ \href{https://moreland.dev}{moreland.dev}\\
 
 \end{multicols}
 
