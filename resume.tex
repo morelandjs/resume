@@ -57,7 +57,7 @@
 
 \begin{center}
   \small
-  \faicon{location}\, Philadelphia, PA 19106 \sep
+  \faicon{location}\, Brooklyn, NY 11222 \sep
   \faicon{envelope}\, morelandjs@gmail.com \sep
   \faicon{mobile}\, 330-671-1243
 \end{center}
@@ -87,31 +87,34 @@ DAAD fellow---year of work/study in Germany
 \subsection{Languages and libraries}
 \smallskip
 
-Python (NumPy, Pandas, SciPy, scikit-learn), PySpark, SQL, C++, Bash,
-Mathematica
+Python (NumPy, Pandas, SciPy, scikit-learn), C++ (limited), \\
+Cython, PySpark, SQL, Bash, Mathematica
 
 \subsection{Compute environments}
 \smallskip
 
-Hadoop (HDFS, Hive), CDSW, AWS (EC2, S3), HPC (Slurm, Condor)
+AWS (Sagemaker, Glue, EMR, EC2, Batch, Athena)
+Hadoop (HDFS, Hive), CDSW, HPC (Slurm, Condor)
 
 \subsection{Software development and production}
 \smallskip
 
-Docker, Sphinx, Travis, Jenkins, Airflow, Git
+Github, Gitlab, Docker, Sphinx, Travis, Jenkins, Prefect, Airflow (limited)
 
-\subsection{Selected algorithms}
+\subsection{Selected algorithms \& methods}
 \smallskip
 
-Boosted trees, Gaussian processes, MCMC, Bayesian parameter estimation, natural
-language embeddings, paired comparison and ranking estimation
+causal trees, double debiased ML, gaussian processes, MCMC, bayesian parameter
+estimation, boosted trees, forests
 
 \subsection{Miscellaneous}
 \smallskip
 
-10+ years Linux experience\\
+15+ years Linux experience\\
 Millions of cpu hours of HPC experience\\
-Extensive public speaking background
+Extensive public speaking background \\
+Sports ranking and estimation:
+\href{https://moreland.dev/projects/melo}{moreland.dev/projects/melo}
 
 \section{Honors and Awards}
 
@@ -138,64 +141,65 @@ Bernhard, Moreland, and Bass,
 Moreland, Bernhard and Bass,
 \href{https://arxiv.org/abs/1412.4708}{\emph{Physical Review} (2015)}
 
-Complete author profile:
+Author profile (1300+ cite):
 \href{https://inspirehep.net/authors/1279695}{inspirehep.net/authors/1279695}
 
 \columnbreak
 
 \section{Experience}
 
+\subsection{Amazon \textbar\ Senior Data Scientist - Technical Lead}
+\subheading{New York, NY}{July 2021}{present}
+\smallskip
+
+Have been entrusted as primary science owner of senior VP, director and
+team level science goals.
+
+Built and maintain the ML models that identify products likely
+to generate incremental clicks and sales when advertised with Amazon Ads. The
+model scores billions of products each week world wide (WW) and is used to
+filter and inform most Amazon ad product enrollement recommendations.
+Developed the AWS batch inference framework for training and scoring models
+in production and all forecasting capabilities.
+
+Designed and deployed a recommender system for product
+listing improvements that measures the causal effect of various actions on
+downstream advertising performance. Developed the algorithm using a heterogeneous
+implementation of double-debiased ML and published the results to the RecSys 2022
+Consequences and Reveal workshop. Architected the AWS infrastructure design, data
+pipelines, and treatment effect estimation code. The recommendations are served to
+Amazon advertisers WW and are estimated to drive hundreds of millions
+of incremental ARR for customers and tens of millions ARR for Amazon Ads.
+
+Developed a fast causal forest implementation in Cython as well as a software
+framework for causal model validation. Shaped causal inference best
+practices across the ads org.
+
 \subsection{IQVIA \textbar\ Data Scientist}
-\subheading{Plymouth Meeting, Pennsylvania}{July 2019}{present}
+\subheading{Plymouth Meeting, PA}{July 2019}{June 2021}
+\smallskip
 
-Built ETL pipelines to preprocess deidentified medical records and claims;
-developed and deployed machine learning models to predict disease diagnosis and
-therapy transition events.
-
-Consulted various technical and non-technical stakeholders, including clients
-at Sanofi pharmaceuticals and partners of the MIT Newdigs collaboration.
-
-Integrated CI/CD pipelines to existing packages using technologies such as
-Sphinx, Jenkins, Docker, and Airflow.
-
-Started and lead an initiative that accelerated our feature engineering, model
-training and production workflows through the creation of a package template
-generator for our core ML offerings. It has contributed to a projected doubling
-of the team's standard offering delivery capacity.\smallskip
-
-\subsection{Automated Insights \textbar\ Data Science Intern}
-\subheading{Durham, North Carolina}{May 2017}{August 2017}
-
-Worked with the AI Labs R\&D division to develop an intelligent and
-contextually-aware synonym suggester for their flagship product Wordsmith.
-It was integrated into Wordsmith and deployed at scale.\smallskip
+As a technical lead, I designed ETL pipelines to process hundreds of millions
+of medical records and claims and implemented large-scale machine learning models
+on Cloudera and Hadoop systems to predict disease diagnosis and therapy changes.
+I modernized development practices using CI/CD technologies and launched
+an initiative that increased the team's delivery capacity by roughly 30\%.
+Additionally, I provided consultation to leading pharmaceutical companies and
+research institutions, assisting them in optimizing their marketing strategies
+using supervised learning and real-world data.
 
 \subsection{Lawrence Livermore National Lab \textbar\ Research Practicum}
 \subheading{Livermore, California}{June 2014}{August 2014}
-
-Conducted research in the Life Sciences division of the Livermore Nuclear
-Laboratory and performed massively parallel computer simulations to study the
-properties of high-temperature nuclear matter.
-
-\section{Interests}
-
-\subsection{Sports Analytics}
 \smallskip
 
-I developed a computer model to predict the probability distribution of paired
-comparison outcomes, e.g.\ point totals and spreads:
-\href{https://moreland.dev/projects/melo}{https://moreland.dev/projects/melo}.
-\smallskip
-
-\subsection{Physics, Linux, and Tech}
-
-\vfill
+Performed massively parallel hydrodynamic simulations on the Open Science Grid
+to quantify systematic and statistical uncertainties in the high-temperature
+nuclear equation of state.
 
 \section{Links}
 
 \faicon{linkedin} \textbar\ \href{https://www.linkedin.com/in/jscottmoreland}{linkedin.com/in/jscottmoreland}\\[1ex]
 \faicon{github} \textbar\ \href{https://github.com/morelandjs}{github.com/morelandjs}\\[1ex]
-\faicon{keynote} \textbar\ \href{https://www.linkedin.com/in/jscottmoreland/}{speakerdeck.com/morelandjs}\\[1ex]
 \faicon{user} \textbar\ \href{https://moreland.dev}{moreland.dev}\\
 
 \end{multicols}
